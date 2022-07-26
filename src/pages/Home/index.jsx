@@ -18,11 +18,12 @@ export function Home (){
       
       //hhhhhhhhhhhh
       let originals = list.filter(i=>i.slug === 'originals');
-      let randomChosen = math.floor(math.random() * (originals[0].items.result.length -1));
+      let randomChosen = Math.floor(Math.random() * (originals[0].items.results.length -1));
       let chosen = originals[0].items.results[randomChosen];
       let chosenInfo = await Tmdb.getMovieInfo(chosen.id, 'tv');
 
-      console.log(chosenInfo);
+      setFutureData(chosenInfo);
+      console.log(chosenInfo)
     }
     loadAll();
   }, []);

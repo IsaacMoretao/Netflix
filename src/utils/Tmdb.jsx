@@ -55,7 +55,7 @@ export default{
       },
     ]
   },
-  getMovieInfo: async (movieId) => {
+  getMovieInfo: async (movieId, type) => {
     let info = {};
 
     if(movieId) {
@@ -71,5 +71,7 @@ export default{
         break;
       }
     }
+
+    return info;
   }
 }
