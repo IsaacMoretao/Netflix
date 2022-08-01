@@ -1,0 +1,71 @@
+.footer{
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  border-top: 1px solid #8d8d8d;
+  
+  a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    transition: 0.5s;
+
+  }
+  a:hover{
+    font-size: 25px;
+  }
+
+}
+.Popup{
+  position: fixed;
+  z-index: 9999;
+  height: 100vh;
+
+  width: 100%;
+  background: #000000ad;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  section{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+
+    flex-direction: center;
+    align-items: center;
+    background: #000000;
+
+    border: 1px solid rgb(99, 99, 99);
+    border-radius: 20px;
+    
+    button{
+      background: #ff0000;
+      padding: 5px;
+      font-size: 20px;
+      font-weight: 700;
+      border-radius: 5px;
+      color: #000000;
+      cursor: pointer;
+    }
+
+    p{
+      width: 300px;
+    }
+
+    a{
+      color: rgb(173, 173, 3);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    img{
+      height: 100px;
+      margin: 10px;
+    }
+  }
+}

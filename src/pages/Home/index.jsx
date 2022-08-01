@@ -1,8 +1,12 @@
 import './Style.scss';
 import  Tmdb  from "../../utils/Tmdb";
 import { MovieRow } from '../../Components/MovieRow/Index';
-import { FuturedMuvie } from '../../Components/FuturedMuvie/Index'
+
+import { FuturedMuvie } from '../../Components/FuturedMuvie/Index';
+import { Header } from '../../Components/header/Index';
 import React, { useEffect, useState } from 'react';
+
+import Logo from '../../Assets/Icon.ico'
 
 
 
@@ -10,6 +14,8 @@ export function Home (){
 
   const [movieList, setMovieList] = useState([]);
   const [futureData, setFutureData] = useState(null);
+  const [blackHeader, setBlackHeader] = useState(false);
+  const [Popup, setPopup] = useState('flex');
 
   useEffect(() =>{
     const loadAll = async  () => {
@@ -28,8 +34,40 @@ export function Home (){
     loadAll();
   }, []);
 
+  useEffect(()=>{
+
+    const scrollListener = () => {
+      if(window.scrollY > 5){
+        setBlackHeader(true);
+      } else {
+        setBlackHeader(false)
+      }
+    }
+
+    window.addEventListener('scroll', scrollListener);
+  }, []);
+
+  function Sumir(){
+    if(Popup == 'flex'){
+      setPopup('none')
+    }else if(Popup == 'none'){
+      setPopup('flex')
+    } else{
+      console.log('Algo deu errado')
+    }
+  }
+
   return(
     <div className='page'>
+      <div className='Popup' style={{display: `${Popup}`}}>
+        <section>
+          <img src={Logo} alt="" />
+          <p>Esse site é feito exclusivamente por <a href="https://isaacmoretao.github.io/portfolio/">Isaac Moretão</a>, com o objetio de demonstrar hablidades e conhecimentos Web, <b>NÃO É POSSIVEL ASSISTIR NENHUM FILME NESTE SITE !!!</b></p>
+          <button onClick={Sumir}>Entendi</button>
+        </section>
+     
+      </div>
+      <Header black={blackHeader}/>
 
       {futureData &&
         <FuturedMuvie item={futureData}/>
@@ -44,6 +82,10 @@ export function Home (){
           
         ))}
       </section>
+      <footer className='footer'>
+          <a href='https://www.themoviedb.org/?language=pt-BR' target='_blank'>&copy; TMDB</a>
+          <a href='https://about.netflix.com/pt_br' target='_blank'>&copy;Netflix</a>
+      </footer>
       
     </div>
   )

@@ -1,12 +1,16 @@
 import { Home } from "./pages/Home/index";
+import { Routes, Route, BrowserRouter } from "react-router-dom"
 import './globals.scss'
 
 function App() {
 
   return (
     <>
-      <Home />
-    
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
     </>
   )
 }

@@ -1,0 +1,31 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  padding-left: 25px;
+  z-index: 15;
+  background: transparent;
+  transition: 0.5s;
+
+  img{
+    height: 30px;
+    
+  }
+  figure{
+    height: 37px;
+    border-radius: 10px;
+    background: #7a7a7a;
+    border: 2px solid #000000;
+
+    img{
+      height: 35px;
+    }
+
+  }
+}
+header.black{
+  background: #141414;
+}
