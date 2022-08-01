@@ -13,7 +13,7 @@ export function Header({black}) {
         <img src={Logo} alt="Netflix - Logo" />
       </a>
 
-        <Link to=''>
+        <Link to={'/Info'}>
           <figure>
             <img src={Usuario} alt="" />
           </figure>
