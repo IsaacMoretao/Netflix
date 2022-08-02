@@ -5,10 +5,7 @@ import { MovieRow } from '../../Components/MovieRow/Index';
 import { FuturedMuvie } from '../../Components/FuturedMuvie/Index';
 import { Header } from '../../Components/header/Index';
 import React, { useEffect, useState } from 'react';
-
 import Logo from '../../Assets/Icon.ico'
-
-
 
 export function Home (){
 
@@ -22,7 +19,6 @@ export function Home (){
       let list = await Tmdb.getHomeList() ;
       setMovieList(list);
       
-      //hhhhhhhhhhhh
       let originals = list.filter(i=>i.slug === 'originals');
       let randomChosen = Math.floor(Math.random() * (originals[0].items.results.length -1));
       let chosen = originals[0].items.results[randomChosen];
