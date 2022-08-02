@@ -27,10 +27,7 @@
       cursor: pointer;
     }
 
-    .dois:hover  .um{
-      
-      
-    }
+
 
     figure{
       height: 250px;
@@ -38,14 +35,17 @@
       border-radius: 1000px;
       background: url('../../Assets/Usuario.png') no-repeat center center;
       background-size: 250px 250px;
+      padding: 100px;
       
       
     }
 
-    figure:hover{
+    figure:hover  {
       animation: ImgAnimation 0.3s linear;
       background: url('../../Assets/Icon.ico') no-repeat center center;
     }
+
+    
 
   
 
@@ -103,7 +103,6 @@
   }
 
   25%{
-    box-shadow: 20px 10px 10px #000000;
   }
   
   49%{
@@ -114,17 +113,14 @@
     width: 0px;
     background: url('../../Assets/Icon.ico') no-repeat center center;
     background-size: 0px 250px;
-    box-shadow: 0px 0px 0px #000000;
   }
  
   75%{
-    box-shadow: -20px 10px 10px #000000;
   }
  
   100%{
     width: 250px;
     background: url('../../Assets/Icon.ico') no-repeat center center;
     background-size: 250px 250px;
-    box-shadow: 0px 0px 0px #000000;
   }
 }

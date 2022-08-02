@@ -8,8 +8,9 @@ export function MyInfo() {
       <Header/>
       <div className='divImage'>
         <div className='divImageDois'>
-        <figure className='dois'/>
-        <section className='um'/>
+          <figure/>
+        
+        
           
         
         </div>
@@ -32,7 +33,10 @@ export function MyInfo() {
           <a href='https://www.instagram.com/isaac_moretao/'>Click aqui</a>
         </section>
       </div>
-      <button className='verMais'>VER MAIS</button>
+      <a href="https://isaacmoretao.github.io/portfolio/">
+        <button className='verMais'>VER MAIS</button>
+      </a>
+      
     </div>
   )
 }
