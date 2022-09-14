@@ -9,11 +9,11 @@ export function Header({black}) {
 
   return(
     <header className={black ?'black' : ''}>
-      <a href="http://localhost:3000/">
+      <a href="https://isaacmoretao.github.io/Netflix/">
         <img src={Logo} alt="Netflix - Logo" />
       </a>
 
-        <Link to={'/Info'}>
+        <Link to={'/Netflix/Info'}>
           <figure>
             <img src={Usuario} alt="" />
           </figure>

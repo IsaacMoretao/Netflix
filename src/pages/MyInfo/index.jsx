@@ -9,10 +9,6 @@ export function MyInfo() {
       <div className='divImage'>
         <div className='divImageDois'>
           <figure/>
-        
-        
-          
-        
         </div>
       </div>
       <div className='InfoList'>
